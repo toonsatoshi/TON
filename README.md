@@ -14,6 +14,37 @@ Initial scaffold for a TON fixed-yield protocol using **Tact** contracts and a *
 - Shared protocol constants, errors, math stubs, and message schema.
 - Blueprint-style test plan skeletons.
 - Frontend component scaffold for market cards and swap panel.
+- Cross-platform bootstrap installers for fast project setup.
+
+## One-command bootstrap
+
+### macOS/Linux
+
+```bash
+make bootstrap
+```
+
+### Windows (PowerShell)
+
+```powershell
+make bootstrap-windows
+```
+
+The bootstrap scripts will:
+
+1. Verify Node.js and npm are installed.
+2. Install root dependencies (test harness).
+3. Install frontend dependencies.
+
+## Run the project
+
+```bash
+# Run scaffold tests
+make test
+
+# Start frontend app
+make dev
+```
 
 ## Next implementation steps
 
