@@ -1,54 +1,56 @@
-# TON Yield Protocol Scaffold
+# TON Portfolio Repository
 
-Initial scaffold for a TON fixed-yield protocol using **Tact** contracts and a **Next.js/TMA** frontend.
+This repository is now structured as a **multi-project portfolio** centered on TON ecosystem work.
 
-## Implemented in this bootstrap
+## Repository purpose
 
-- Contract-level interfaces and storage layouts for:
-  - Market factory
-  - Vault (PT/YT mint/redeem)
-  - PT and YT jetton masters
-  - PT/asset AMM
-  - Yield oracle
-  - Fee distributor
-- Shared protocol constants, errors, math stubs, and message schema.
-- Blueprint-style test plan skeletons.
-- Frontend component scaffold for market cards and swap panel.
-- Cross-platform bootstrap installers for fast project setup.
+Use this repo as the official home for:
 
-## One-command bootstrap
+- TON protocol experiments
+- production-intent protocol implementations
+- documentation, architecture notes, and research artifacts
+- future companion projects (indexers, bots, analytics, SDKs, etc.)
 
-### macOS/Linux
+## Monorepo layout
 
-```bash
-make bootstrap
+```text
+.
+├── projects/
+│   └── ton/               # Fixed-yield TON protocol scaffold (current primary project)
+└── README.md              # Portfolio-level overview (this file)
 ```
 
-### Windows (PowerShell)
+## Active projects
 
-```powershell
-make bootstrap-windows
-```
+### 1) `projects/ton`
+A fixed-yield protocol scaffold using Tact smart contracts and a Next.js / Telegram Mini App frontend.
 
-The bootstrap scripts will:
+- Contract scaffolding for core protocol modules
+- Frontend scaffolding for market and swap UX
+- Test and bootstrap scripts for fast iteration
 
-1. Verify Node.js and npm are installed.
-2. Install root dependencies (test harness).
-3. Install frontend dependencies.
+➡ See the project README for setup and development details:
+`projects/ton/README.md`
 
-## Run the project
+## Portfolio roadmap
 
-```bash
-# Run scaffold tests
-make test
+Planned additions to this repository include:
 
-# Start frontend app
-make dev
-```
+- Additional TON DeFi primitives and strategy vaults
+- Shared tooling across projects (linting, local chain scripts, CI workflows)
+- Common architecture decision records (ADRs)
+- Reusable UI and SDK packages where appropriate
 
-## Next implementation steps
+## Working conventions
 
-1. Fill contract handlers with full message logic and validation.
-2. Implement fixed-point math library (`mulDiv`, `ln`, `exp`, Newton solver) and unit tests.
-3. Wire AMM quote + swap execution through jetton notifications.
-4. Add TON Connect integration and live chain reads for dashboard metrics.
+- Each portfolio project lives under `projects/<project-name>`.
+- Each project should include its own `README.md` and local scripts.
+- Portfolio-level standards and cross-project docs will remain at the root as the repo grows.
+
+---
+
+If you're reviewing this repository for collaboration or hiring, start with:
+
+1. `projects/ton/README.md`
+2. `projects/ton/contracts/`
+3. `projects/ton/frontend/`
