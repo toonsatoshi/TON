@@ -1,0 +1,14 @@
+{
+  "name": "ton-yield-protocol-scaffold",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Bootstrap scripts and test harness for TON Yield Protocol scaffold",
+  "scripts": {
+    "bootstrap": "bash ./scripts/bootstrap.sh",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.5"
+  }
+}
